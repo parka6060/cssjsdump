@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var sparkleEffectElement = document.querySelector('.sparkle-effect');
   
   if (sparkleEffectElement) {
-    sparkleEffectElement.style.position = 'relative';
     var sparklesCount = 10; // Number of sparkles to generate
     
     for (var i = 0; i < sparklesCount; i++) {
