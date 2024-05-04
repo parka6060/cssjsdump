@@ -1,72 +1,73 @@
 html {
-  overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 #header > .wrapper > .inner > :nth-child(1) {
-  width: 9%;
+	width: 9%;
 }
 
 #header > .wrapper > .inner > :nth-child(2) {
-  width: 45.5%;
+	width: 45.5%;
 }
 
 #header > .wrapper > .inner > :nth-child(3) {
-  width: 45.5%;
+	width: 45.5%;
 }
 
 .divide {
-  /* Add any necessary styles for the .divide class */
+  /* Add any necessary styles for the .divide class */;
 }
 
 .button {
-  position: relative;
-  text-decoration: none;
+	position: relative;
+	text-decoration: none;
 }
 
 .button::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  inset: 0 0 0 0;
-  background: #FFB800;
-  z-index: 1;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform .5s ease;
-  mix-blend-mode: screen;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	inset: 0 0 0 0;
+	background: #FFB800;
+	z-index: 1;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform .5s ease;
+	mix-blend-mode: screen;
 }
 
 .button:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 .grow {
-  transform: scale(1);
-  transition: transform .5s ease, box-shadow .5s ease;
+	transform: scale(1);
+	transition: transform .5s ease, box-shadow .5s ease;
 }
 
 .grow:hover {
-  transform: scale(1.01);
-  transition: transform .5s ease, box-shadow .5s ease;
-  box-shadow: 0rem 1.75rem 3.375rem 0rem rgba(40, 39, 38, 0.278);
+	transform: scale(1.01);
+	transition: transform .5s ease, box-shadow .5s ease;
+	box-shadow: 0rem 1.75rem 3.375rem 0rem rgba(40, 39, 38, 0.278);
 }
 
 @keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+
+	100% {
+		background-position: 200% 50%;
+	}
 }
 
 strong {
-  background: linear-gradient(
+	background: linear-gradient(
     to right,
     rgba(255, 0, 0, 1) 0%,
     rgba(255, 154, 0, 1) 10%,
@@ -80,113 +81,125 @@ strong {
     rgba(251, 7, 217, 1) 90%,
     rgba(255, 0, 0, 1) 100%
   );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent !important;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent !important;
-  animation: rainbow 2s linear infinite;
+	background-size: 200% auto;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent !important;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent !important;
+	animation: rainbow 2s linear infinite;
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  5% {
-    transform: translateY(-5px);
-    animation-timing-function: ease-in;
-  }
-  10% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  15% {
-    transform: translateY(-3px);
-    animation-timing-function: ease-in;
-  }
-  20% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  25% {
-    transform: translateY(-1px);
-    animation-timing-function: ease-in;
-  }
-  30% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+
+	5% {
+		transform: translateY(-5px);
+		animation-timing-function: ease-in;
+	}
+
+	10% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+
+	15% {
+		transform: translateY(-3px);
+		animation-timing-function: ease-in;
+	}
+
+	20% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+
+	25% {
+		transform: translateY(-1px);
+		animation-timing-function: ease-in;
+	}
+
+	30% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+
+	100% {
+		transform: translateY(0);
+	}
 }
 
 .button.bounce .label,
 .button.bounce svg {
-  animation: bounce 2s infinite;
+	animation: bounce 2s infinite;
 }
 
-  .sparkle-effect {
-    position: relative;
-    overflow: hidden;
-    }
-    
-    .sparkle-effect::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 5;
-    }
-    
-    .sparkle-effect .sparkle {
-    position: absolute;
-    color: #54F7D0;
-    font-size: 12px;
-    pointer-events: none;
-    animation: sparkle 1s infinite ease-in-out;
-    opacity: 0;
-    }
-    
-    @keyframes sparkle {
-    0% {
-    opacity: 0;
-    transform: scale(0);
-    }
-    50% {
-    opacity: 0.7;
-    transform: scale(1);
-    }
-    100% {
-    opacity: 0;
-    transform: scale(0);
-    }
-    }
+.sparkle-effect {
+	position: relative;
+	overflow: hidden;
+}
+
+.sparkle-effect::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 5;
+}
+
+.sparkle-effect .sparkle {
+	position: absolute;
+	color: #54F7D0;
+	font-size: 12px;
+	pointer-events: none;
+	animation: sparkle 1s infinite ease-in-out;
+	opacity: 0;
+}
+
+@keyframes sparkle {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	50% {
+		opacity: 0.7;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
 .tilt-effect {
-    display: inline-block;
-    transform-style: preserve-3d;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    animation: idle-animation 5s infinite ease-in-out;
-    }
-    
-    .tilt-effect:hover {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    animation: none;
-    }
-    
-    @keyframes idle-animation {
-    0% {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    }
-    50% {
-    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
-    }
-    100% {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    }
-    }
+	display: inline-block;
+	transform-style: preserve-3d;
+	transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+	animation: idle-animation 5s infinite ease-in-out;
+}
+
+.tilt-effect:hover {
+	transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	animation: none;
+}
+
+@keyframes idle-animation {
+	0% {
+		transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+	}
+
+	50% {
+		transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+	}
+
+	100% {
+		transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+	}
+}
