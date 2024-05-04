@@ -10,28 +10,29 @@ button.classList.add('bounce');
 
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-    var sparkleEffectElement = document.querySelector('.sparkle-effect');
-    
-    if (sparkleEffectElement) {
+document.addEventListener('DOMContentLoaded', function() {
+  var sparkleEffectElement = document.querySelector('.sparkle-effect');
+  
+  if (sparkleEffectElement) {
+    sparkleEffectElement.style.position = 'relative';
     var sparklesCount = 10; // Number of sparkles to generate
     
     for (var i = 0; i < sparklesCount; i++) {
-    var sparkle = document.createElement('div');
-    sparkle.classList.add('sparkle');
-    sparkle.textContent = '✦';
-    sparkle.style.left = Math.random() * 100 + '%';
-    sparkle.style.top = Math.random() * 100 + '%';
-    
-    var size = Math.random() * 10 + 10;
-    sparkle.style.fontSize = size + 'px';
-    
-    sparkle.style.animationDelay = Math.random() * 3 + 's';
-    sparkle.style.animationDuration = Math.random() * 4 + 3 + 's';
-    sparkleEffectElement.appendChild(sparkle);
+      var sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.textContent = '✦';
+      sparkle.style.left = Math.random() * 100 + '%';
+      sparkle.style.top = Math.random() * 100 + '%';
+      
+      var size = Math.random() * 10 + 10;
+      sparkle.style.fontSize = size + 'px';
+      
+      sparkle.style.animationDelay = Math.random() * 3 + 's';
+      sparkle.style.animationDuration = Math.random() * 4 + 3 + 's';
+      sparkleEffectElement.appendChild(sparkle);
     }
-    }
-    });
+  }
+});
 
 
     const tiltEffects = document.querySelectorAll('.tilt-effect');
